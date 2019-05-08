@@ -1,0 +1,17 @@
+Workflow Piepline:
+
+1) Select a folder
+2) Every x milseconds apply scan of the folder
+
+Assumptions:
+
+1) No ransomware before the scan
+2) All files are in ascii format
+
+Greedy algorithem:
+
+1) Check last-modified of all the files
+2) All those files that got modified, add to the bin
+3) The remaining files, randomly choose (x%) (half) of them, add them to the bin
+4) Iterate over the files in the bin
+5) If more than y% of the text has change, alert ransomware
